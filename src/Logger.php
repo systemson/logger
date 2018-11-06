@@ -37,7 +37,7 @@ class Logger extends AbstractLogger implements ConfigAwareInterface
      */
     public function log($level, $message, array $context = [])
     {
-        $message .= "\r\n" . implode("\r\n", $context);
+        $message .= PHP_EOL . implode(PHP_EOL, $context);
 
         $this->filesystem->put($this->getConfig('logger_path') . '/' . $this->name, $message);
     }
