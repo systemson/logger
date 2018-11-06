@@ -7,6 +7,9 @@ use Amber\Logger\Config\ConfigAwareTrait;
 use Amber\Logger\Config\ConfigAwareInterface;
 use Psr\Log\AbstractLogger;
 
+/**
+ * @todo SHOULD provide an interface to read it's own log files.
+ */
 class Logger extends AbstractLogger implements ConfigAwareInterface
 {
     use ConfigAwareTrait;
